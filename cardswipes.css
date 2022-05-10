@@ -1,0 +1,126 @@
+
+/* Card design */
+.card {
+  font-size: 30px;
+  line-height: 200px;
+  text-align:center;
+  max-width: 100%;
+  height: auto;
+  background: none;
+  -webkit-transform-origin: 50% 99%;
+  transform-origin: 50% 99%;
+}
+.cardcontainer {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 144px;
+  right: -3.1%;
+}
+
+/* List functionality */
+.list .cardlist {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+}
+.list .card {
+  display: none;
+}
+.list .current {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Buttons */
+
+button {
+  background: white;
+  border: red;
+  border-style:solid;
+  border-width: 2px;
+  color: red;
+  border-radius: 50% 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  margin: 0 .5em;
+  position: relative;
+  left: 47%;
+  right: 50%;
+  top: -9px;
+
+}
+button:focus {
+  outline: 0;
+  background: white;
+}
+.but-nope {
+  background: white;
+}
+.but-nope:focus {
+  outline: 0;
+  background: white;
+}
+
+.cardcontainer.yes .card {
+  -webkit-animation: yay 0.7s ease-out;
+  animation: yay 0.7s ease-out;
+}
+.cardcontainer.nope .card {
+  -webkit-animation: nope 0.7s ease-out;
+  animation: nope 0.7s ease-out;
+}
+
+
+/*
+  Animations
+*/
+
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes yay {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes nope {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
